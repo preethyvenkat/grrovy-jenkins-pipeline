@@ -3,6 +3,10 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
+            
+            steps {
+              sh 'mvn --version'
+            }
 
             steps {
                 withMaven(maven : 'maven_3_6_3') {
